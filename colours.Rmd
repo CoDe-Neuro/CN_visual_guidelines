@@ -1,0 +1,37 @@
+---
+title: "CN visual guidelines"
+author: "Lucas França"
+date: "03/05/2022"
+output: html_document
+---
+
+```{r}
+library(MetBrewer)
+library(scales)
+```
+
+# Qualitative colour palette 
+
+```{r}
+scales::show_col(met.brewer("Archambault", 11), borders = NA)
+```
+
+# Divergent colours
+
+## Scale 1
+
+```{r}
+scales::show_col(colorRampPalette(colors = c(met.brewer("Archambault", 11)[3], 
+                                       "#FFFFFF", 
+                                       met.brewer("Archambault", 11)[8]))(13), borders = NA)
+```
+
+# Scale 2
+
+```{r}
+scales::show_col(colorRampPalette(colors = c(met.brewer("Ingres", 11)[2], 
+                                      "#FFFFFF", 
+                                      met.brewer("Ingres", 11)[10]))(13), borders = NA)
+
+```
+
