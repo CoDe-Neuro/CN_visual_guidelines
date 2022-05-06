@@ -2,7 +2,9 @@
 title: "CN visual guidelines"
 author: "Lucas França"
 date: "03/05/2022"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r}
@@ -35,3 +37,36 @@ scales::show_col(colorRampPalette(colors = c(met.brewer("Ingres", 11)[2],
 
 ```
 
+# Sequential colours
+
+scales::show_col(met.brewer("Archambault", 11)[c(1,3,6,8,10)], borders = NA)
+
+# Scale 1
+
+```{r}
+scales::show_col(colorRampPalette(c("#FFFFFF", met.brewer("Archambault", 11)[3]))(11), borders = NA)
+```
+
+# Scale 2
+
+```{r}
+scales::show_col(colorRampPalette(c("#FFFFFF", met.brewer("Archambault", 11)[8]))(11), borders = NA)
+```
+
+# Scale 3
+
+```{r}
+scales::show_col(colorRampPalette(c("#FFFFFF", met.brewer("Archambault", 11)[1]))(11), borders = NA)
+```
+
+# Scale 4
+
+```{r}
+scales::show_col(colorRampPalette(c("#FFFFFF", met.brewer("Archambault", 11)[6]))(11), borders = NA)
+```
+
+# Scale 5
+
+```{r}
+scales::show_col(colorRampPalette(c("#FFFFFF", met.brewer("Archambault", 11)[10]))(11), borders = NA)
+```
